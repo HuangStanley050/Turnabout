@@ -23,16 +23,19 @@ class NavigationBar extends Component {
       isOpen: !this.state.isOpen,
     });
   };
+
   render() {
     return (
       <section>
-        <Navbar style={{ backgroundColor: "#6788bf" }} light expand="md">
+        <Navbar style={{ backgroundColor: "#6788bf" }} expand="md">
           <NavbarBrand>
-            <img style={{ width: "89px", height: "40px" }} src={AceLogo} />
+            <Link to="/">
+              <img style={{ width: "89px", height: "40px" }} src={AceLogo} />
+            </Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="mx-auto" navbar>
+            <Nav className={style.links} navbar>
               {Links.map(link => (
                 <NavItem key={link.text}>
                   <NavLink tag={Link} to={link.path}>
@@ -44,7 +47,12 @@ class NavigationBar extends Component {
           </Collapse>
           <div className={style.social_icons}>
             {SocialIcons.map(social => (
-              <a target="_blank" href={social.url} key={social.url}>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={social.url}
+                key={social.url}
+              >
                 {social.icon}
               </a>
             ))}

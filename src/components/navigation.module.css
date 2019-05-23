@@ -13,6 +13,22 @@
   color: var(--mainBlack);
   transform: translateY(-5px);
 }
+
+.links {
+  display: flex;
+  margin: 0 auto;
+}
+
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  margin: 0.5rem 1rem;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+  font-weight: bold;
+}
 @media screen and (max-width: 576px) {
   .social_icons {
     display: none;

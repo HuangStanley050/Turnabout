@@ -1,10 +1,20 @@
 import React from "react";
+import style from "./footer.module.css";
+import Links from "../constants/links";
+import SocialIcons from "../constants/socialIcons";
+import { Link } from "gatsby";
 
 const Footer = props => {
   return (
-    <section>
-      <h1>Footer</h1>
-    </section>
+    <footer className={style.footer}>
+      <div className={style.links}>
+        {Links.map((item, index) => (
+          <Link key={index} to={item.path}>
+            {item.text}
+          </Link>
+        ))}
+      </div>
+    </footer>
   );
 };
 
