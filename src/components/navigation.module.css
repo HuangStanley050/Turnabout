@@ -1,0 +1,20 @@
+.social_icons {
+  display: flex;
+}
+
+.social_icons a {
+  color: var(--primaryColor);
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: var(--mainTransition);
+}
+
+.social_icons a:hover {
+  color: var(--mainBlack);
+  transform: translateY(-5px);
+}
+@media screen and (max-width: 576px) {
+  .social_icons {
+    display: none;
+  }
+}
