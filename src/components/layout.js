@@ -18,11 +18,11 @@ import "./layout.css";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <main>
       <NavigationBar />
       {children}
       <Footer />
-    </>
+    </main>
   );
 };
 

@@ -14,6 +14,13 @@ const Footer = props => {
           </Link>
         ))}
       </div>
+      <div className={style.icons}>
+        {SocialIcons.map((icon, i) => (
+          <a href={icon.url} key={i}>
+            {icon.icon}
+          </a>
+        ))}
+      </div>
     </footer>
   );
 };

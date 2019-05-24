@@ -28,11 +28,11 @@ class NavigationBar extends Component {
     return (
       <section>
         <Navbar style={{ backgroundColor: "#6788bf" }} expand="md">
-          <NavbarBrand>
+          <div>
             <Link to="/">
               <img style={{ width: "89px", height: "40px" }} src={AceLogo} />
             </Link>
-          </NavbarBrand>
+          </div>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className={style.links} navbar>

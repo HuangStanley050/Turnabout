@@ -8,11 +8,11 @@ export default [
     text: "Cases",
   },
   {
-    path: "/contact",
-    text: "Contact",
-  },
-  {
     path: "/about",
     text: "About",
+  },
+  {
+    path: "/contact",
+    text: "Contact",
   },
 ];
