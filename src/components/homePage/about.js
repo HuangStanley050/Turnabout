@@ -1,14 +1,18 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
 import aboutIMG from "../../images/aceAttorney-about.jpg";
+import { Link } from "gatsby";
 
 const About = props => {
   return (
-    <section>
+    <section style={{ margin: "1rem auto" }}>
       <Container>
         <h1
-          style={{ margin: "1rem auto" }}
-          className="text-center text-capitalize"
+          style={{
+            margin: "2rem auto",
+            backgroundColor: "var(--primaryColor)",
+          }}
+          className="text-center text-info text-capitalize"
         >
           about
         </h1>
@@ -20,6 +24,8 @@ const About = props => {
                 height: "300px",
                 border: "1px solid var(--primaryColor)",
                 objectFit: "cover",
+
+                boxShadow: "5px 10px #888888",
               }}
               src={aboutIMG}
             />
@@ -33,6 +39,11 @@ const About = props => {
               fatback jerky pancetta filet mignon, meatloaf salami prosciutto
               corned beef chicken pig strip steak short ribs.
             </p>
+            <Link to="/about">
+              <Button outline color="primary">
+                Read More
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>
