@@ -1,14 +1,21 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import style from "../components/404.module.css";
+import Banner from "../components/banner";
+import { Link } from "gatsby";
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <header className={style.error}>
+      <Banner title="Page not found!!">
+        <Link className="btn-white" to="/">
+          Back to home
+        </Link>
+      </Banner>
+    </header>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
