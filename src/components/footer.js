@@ -21,6 +21,9 @@ const Footer = props => {
           </a>
         ))}
       </div>
+      <div className={style.copyright}>
+        copyright &copy; All images and icons belong to Capcom
+      </div>
     </footer>
   );
 };
