@@ -6,11 +6,13 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import SimpleHero from "../components/simpleHero";
 import Banner from "../components/banner";
+import About from "../components/homePage/about";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <SimpleHero />
+    <About />
   </Layout>
 );
 
