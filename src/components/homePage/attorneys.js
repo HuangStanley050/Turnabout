@@ -20,11 +20,15 @@ const AttorneysInfo = props => {
         <Row>
           {attorneys.map(attorney => (
             <Col className="text-center" xs="12" md="4" key={attorney.title}>
-              <Link to="/about">
+              <Link to="/attorneys">
                 <Icon source={attorney.source} />
               </Link>
-              <h3 style={{ color: "#4e6891" }}>{attorney.title}</h3>
-              <p style={{ fontSize: "1rem" }}>{attorney.text}</p>
+              <h3 style={{ color: "#4e6891", marginTop: "2rem" }}>
+                {attorney.title}
+              </h3>
+              <p style={{ fontSize: "1rem", marginTop: "2rem" }}>
+                {attorney.text}
+              </p>
             </Col>
           ))}
         </Row>

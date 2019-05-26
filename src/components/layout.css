@@ -31,7 +31,9 @@ body {
   line-height: 1.4;
   font-size: 1rem;
 }
-
+/* #newHero {
+  background-image: linear-gradient(rgba(106, 140, 193, 0.7), rgba(0, 0, 0, 0.7));
+} */
 .defaultHero {
   min-height: calc(100vh - 62px);
   background: linear-gradient(rgba(106, 140, 193, 0.7), rgba(0, 0, 0, 0.7)), url("../images/aceAttorney-hero-bg.jpg") center/cover no-repeat;

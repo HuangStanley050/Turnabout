@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import aboutIMG from "../../images/aceAttorney-about.jpg";
+
 import { Link } from "gatsby";
 
 const About = props => {
