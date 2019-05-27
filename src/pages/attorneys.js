@@ -5,7 +5,6 @@ import { graphql } from "gatsby";
 
 class Attorneys extends Component {
   render() {
-    console.log(this.props.data.defaultHero);
     return (
       <Layout>
         <NewHero img={this.props.data.defaultHero.childImageSharp.fluid} />

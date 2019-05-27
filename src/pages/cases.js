@@ -6,7 +6,7 @@ class Cases extends Component {
   render() {
     return (
       <Layout>
-        <h1>Cases Page</h1>
+        <NewHero img={this.props.data.defaultHero.childImageSharp.fluid} />
       </Layout>
     );
   }
@@ -14,7 +14,7 @@ class Cases extends Component {
 
 export const query = graphql`
   {
-    defaultHero: file(relativePath: { eq: "aceAttorney-hero-bg.jpg" }) {
+    defaultHero: file(relativePath: { eq: "cases-bg.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

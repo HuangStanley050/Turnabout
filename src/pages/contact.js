@@ -6,14 +6,14 @@ import { graphql } from "gatsby";
 const Contact = props => {
   return (
     <Layout>
-      <h1>Contact page</h1>
+      <NewHero img={props.data.defaultHero.childImageSharp.fluid} />
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    defaultHero: file(relativePath: { eq: "aceAttorney-hero-bg.jpg" }) {
+    defaultHero: file(relativePath: { eq: "newphone-bg.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
