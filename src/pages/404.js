@@ -4,15 +4,15 @@ import Layout from "../components/layout";
 //import SEO from "../components/seo";
 import style from "../components/404.module.css";
 import Banner from "../components/banner";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const NotFoundPage = () => (
   <Layout>
     <header className={style.error}>
       <Banner title="Page not found!!">
-        <Link className="btn-white" to="/">
+        <AniLink fade className="btn-white" to="/">
           Back to home
-        </Link>
+        </AniLink>
       </Banner>
     </header>
   </Layout>

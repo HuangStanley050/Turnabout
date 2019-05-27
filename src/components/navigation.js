@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
+//import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Links from "../constants/links";
 import SocialIcons from "../constants/socialIcons";
 import AceLogo from "../images/Ace_Attorney_Logo.png";
@@ -29,16 +30,16 @@ class NavigationBar extends Component {
       <section>
         <Navbar style={{ backgroundColor: "#6788bf" }} expand="md">
           <div>
-            <Link to="/">
+            <AniLink fade to="/">
               <img style={{ width: "89px", height: "40px" }} src={AceLogo} />
-            </Link>
+            </AniLink>
           </div>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className={style.links} navbar>
               {Links.map(link => (
                 <NavItem key={link.text}>
-                  <NavLink tag={Link} to={link.path}>
+                  <NavLink fade tag={AniLink} to={link.path}>
                     {link.text}
                   </NavLink>
                 </NavItem>
