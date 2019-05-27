@@ -11,7 +11,6 @@ import About from "../components/homePage/about";
 import AttorneysInfo from "../components/homePage/attorneys";
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <SEO title="Home" />

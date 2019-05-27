@@ -4,15 +4,15 @@ import BackgroundImage from "gatsby-background-image";
 //home prop is whether or not this is a hero component and will need linear gradient
 const newHero = ({ img, home, children }) => {
   const backgroundStyle = {
-    backgroundPosition: "center",
+    backgroundPosition: home ? "center" : "20% 10%",
     backgroundSize: "cover",
 
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     opacity: "1 !important",
-    minHeight: home ? "calc(100vh - 62px)" : null,
+    minHeight: home ? "calc(100vh - 62px)" : "35vh",
   };
-  return <BackgroundImage style={backgroundStyle} fluid={img} home={home} />;
+  return <BackgroundImage style={backgroundStyle} fluid={img} />;
 };
 export default newHero;
