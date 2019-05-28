@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import NewHero from "../components/newHero";
 import { graphql } from "gatsby";
 import attorneys from "../constants/attorneys-info";
-import { Col, Row, Container } from "reactstrap";
+import { Col, Row, Container, Badge } from "reactstrap";
 import Icon from "../components/icon-image";
 const athenaColor = "#eaea33";
 const apolloColor = "#bf2300";
@@ -50,11 +50,24 @@ class Attorneys extends Component {
                 <div
                   style={{
                     display: "flex",
+                    position: "relative",
                     alignItems: "center",
                     marginLeft: "1.5rem",
                   }}
                 >
                   <p style={{ fontSize: "1.03rem" }}>{attorney.text}</p>
+                  <Badge
+                    style={{
+                      fontSize: "1rem",
+                      position: "absolute",
+                      bottom: "0.5rem",
+                      right: "0",
+                    }}
+                    href="#"
+                    color="primary"
+                  >
+                    {attorney.email}
+                  </Badge>
                 </div>
               </Col>
             ))}
