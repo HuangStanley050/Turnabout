@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 //import Image from "../components/image"
 import SEO from "../components/seo";
 import NewHero from "../components/newHero";
-import SimpleHero from "../components/simpleHero";
+//import SimpleHero from "../components/simpleHero";
 //import Banner from "../components/banner";
 import About from "../components/homePage/about";
 import AttorneysInfo from "../components/homePage/attorneys";

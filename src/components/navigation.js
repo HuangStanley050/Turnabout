@@ -9,7 +9,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -31,7 +30,11 @@ class NavigationBar extends Component {
         <Navbar style={{ backgroundColor: "#6788bf" }} expand="md">
           <div>
             <AniLink fade to="/">
-              <img style={{ width: "89px", height: "40px" }} src={AceLogo} />
+              <img
+                alt=""
+                style={{ width: "89px", height: "40px" }}
+                src={AceLogo}
+              />
             </AniLink>
           </div>
           <NavbarToggler onClick={this.toggle} />
