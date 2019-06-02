@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import {
   Container,
   Col,
@@ -25,7 +26,7 @@ const CasesComponent = props => {
             caseSummary
             images {
               fluid {
-                src
+                ...GatsbyContentfulFluid_tracedSVG
               }
             }
           }
@@ -39,7 +40,7 @@ const CasesComponent = props => {
     <Container style={{ margin: "2rem auto" }}>
       <Row className="row-eq-height">
         {data.allContentfulCase.edges.map(({ node }) => {
-          //console.log(node.name);
+          //console.log(node.images);
           return (
             <Col
               style={{ marginBottom: "1rem" }}
@@ -47,10 +48,33 @@ const CasesComponent = props => {
               xs="12"
               md="4"
             >
-              <Card style={{ height: "100%" }}>
+              <Card
+                body
+                inverse
+                color="primary"
+                style={{
+                  height: "100%",
+                }}
+              >
                 <CardBody>
-                  <CardTitle>{node.name}</CardTitle>
-                  <CardText>{node.caseSummary}</CardText>
+                  <Img
+                    style={{ height: "350px" }}
+                    fluid={node.images[0].fluid}
+                  />
+                  <CardTitle>
+                    <h2
+                      style={{
+                        margin: "2rem auto",
+                        backgroundColor: "var(--primaryColor)",
+                      }}
+                      className="text-center text-info text-capitalize"
+                    >
+                      {node.name}
+                    </h2>
+                  </CardTitle>
+                  <CardText>
+                    <p>{node.caseSummary}</p>
+                  </CardText>
                   <div className="text-center">
                     <Button>More Info</Button>
                   </div>
