@@ -26,7 +26,7 @@ const CasesComponent = props => {
             caseSummary
             images {
               fluid {
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid
               }
             }
           }
