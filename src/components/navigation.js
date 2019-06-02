@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import { Link } from "gatsby";
+
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Links from "../constants/links";
 import SocialIcons from "../constants/socialIcons";

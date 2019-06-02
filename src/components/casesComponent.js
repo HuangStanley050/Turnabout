@@ -34,13 +34,11 @@ const CasesComponent = props => {
       }
     }
   `);
-  //console.log(data);
 
   return (
     <Container style={{ margin: "2rem auto" }}>
       <Row className="row-eq-height">
         {data.allContentfulCase.edges.map(({ node }) => {
-          //console.log(node.images);
           return (
             <Col
               style={{ marginBottom: "1rem" }}
@@ -72,9 +70,7 @@ const CasesComponent = props => {
                       {node.name}
                     </h2>
                   </CardTitle>
-                  <CardText>
-                    <p>{node.caseSummary}</p>
-                  </CardText>
+                  <CardText>{node.caseSummary}</CardText>
                   <div className="text-center">
                     <Button>More Info</Button>
                   </div>

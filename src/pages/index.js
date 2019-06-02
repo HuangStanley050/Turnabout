@@ -9,6 +9,7 @@ import NewHero from "../components/newHero";
 //import Banner from "../components/banner";
 import About from "../components/homePage/about";
 import AttorneysInfo from "../components/homePage/attorneys";
+import FeatureCases from "../components/homePage/featureCases";
 
 const IndexPage = ({ data }) => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = ({ data }) => {
       <NewHero home="true" img={data.defaultHero.childImageSharp.fluid} />
       <About />
       <AttorneysInfo />
+      <FeatureCases />
     </Layout>
   );
 };
