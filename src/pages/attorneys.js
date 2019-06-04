@@ -63,7 +63,6 @@ class Attorneys extends Component {
                       bottom: "0.5rem",
                       right: "0",
                     }}
-                    href="#"
                     color="primary"
                   >
                     {attorney.email}

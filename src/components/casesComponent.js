@@ -72,7 +72,7 @@ const CasesComponent = props => {
                   </CardTitle>
                   <CardText>{node.caseSummary}</CardText>
                   <div className="text-center">
-                    <Button>More Info</Button>
+                    <Button className="btn-primary">More Info</Button>
                   </div>
                 </CardBody>
               </Card>

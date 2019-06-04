@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import NewHero from "../components/newHero";
 import { graphql } from "gatsby";
 
-const About = props => {
+const Blog = props => {
   return (
     <Layout>
       <NewHero img={props.data.defaultHero.childImageSharp.fluid} />
@@ -23,4 +23,4 @@ export const query = graphql`
   }
 `;
 
-export default About;
+export default Blog;
