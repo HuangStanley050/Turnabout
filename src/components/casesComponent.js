@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Img from "gatsby-image";
 import {
   Container,
@@ -21,7 +22,7 @@ const CasesComponent = props => {
           node {
             slug
             name
-            leadAttorney
+
             contentful_id
             caseSummary
             images {
@@ -44,6 +45,7 @@ const CasesComponent = props => {
               style={{ marginBottom: "1rem" }}
               key={node.contentful_id}
               xs="12"
+              sm="6"
               md="4"
             >
               <Card
@@ -72,7 +74,9 @@ const CasesComponent = props => {
                   </CardTitle>
                   <CardText>{node.caseSummary}</CardText>
                   <div className="text-center">
-                    <Button className="btn-primary">More Info</Button>
+                    <AniLink fade to={`/${node.slug}`}>
+                      <Button className="btn-primary">More Info</Button>
+                    </AniLink>
                   </div>
                 </CardBody>
               </Card>
