@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import CaseTemplateComp from "../components/caseTemplateComp";
 
 const CaseTemplate = ({ data }) => {
   const {
@@ -10,11 +11,25 @@ const CaseTemplate = ({ data }) => {
     victim,
     prosecutor,
     verdict,
+    defendent,
     caseDetails: { caseDetails },
     images,
   } = data.contentfulCase;
   //console.log(images);
-  return <h1>{name}</h1>;
+  return (
+    <CaseTemplateComp
+      title={name}
+      tableData={[
+        { leadAttorney },
+        { assistantAttorney },
+        { date },
+        { victim },
+        { prosecutor },
+        { verdict },
+        { defendent },
+      ]}
+    />
+  );
 };
 
 export const query = graphql`
