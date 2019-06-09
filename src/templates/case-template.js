@@ -18,6 +18,7 @@ const CaseTemplate = ({ data }) => {
   //console.log(images);
   return (
     <CaseTemplateComp
+      detail={caseDetails}
       title={name}
       images={images}
       tableData={[

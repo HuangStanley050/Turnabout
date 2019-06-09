@@ -11,7 +11,6 @@ const CaseTable = props => {
     if (key[0] === "verdict" && item[0] === "Not Guilty") {
       return innocent;
     }
-    //console.log("No Match");
   };
 
   return (

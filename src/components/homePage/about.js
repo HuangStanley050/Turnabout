@@ -40,7 +40,7 @@ const About = props => {
               fatback jerky pancetta filet mignon, meatloaf salami prosciutto
               corned beef chicken pig strip steak short ribs.
             </p>
-            <Link to="/about">
+            <Link to="/attorneys">
               <Button outline color="primary">
                 Read More
               </Button>

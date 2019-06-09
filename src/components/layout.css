@@ -76,3 +76,13 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media (max-width:800px) {
+  .case-summary {
+    display: none;
+  }
+}
+@media (max-width:600px) {
+  .home-hero {
+    display: none !important;
+  }
+}

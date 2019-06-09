@@ -13,6 +13,12 @@ const newHero = ({ img, home, children }) => {
     opacity: "1 !important",
     minHeight: home ? "calc(100vh - 62px)" : "35vh",
   };
-  return <BackgroundImage style={backgroundStyle} fluid={img} />;
+  return (
+    <BackgroundImage
+      className="home-hero"
+      style={backgroundStyle}
+      fluid={img}
+    />
+  );
 };
 export default newHero;
