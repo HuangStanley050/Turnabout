@@ -45,7 +45,7 @@ const CasesComponent = props => {
               style={{ marginBottom: "1rem" }}
               key={node.contentful_id}
               xs="12"
-              sm="6"
+              sm="8"
               md="4"
             >
               <Card

@@ -1,9 +1,10 @@
 import React from "react";
 import { Col, Container, Row, Table } from "reactstrap";
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
+import CaseTable from "./caseTable";
 
 const CaseTemplateComp = props => {
-  console.log(props.tableData);
+  //console.log(props.images);
   return (
     <Layout>
       <Container style={{ marginTop: "1.5rem" }}>
@@ -15,17 +16,11 @@ const CaseTemplateComp = props => {
             <h1>Case summary</h1>
           </Col>
           <Col>
-            <h1>Table summary</h1>
-            <Table borderless>
-              <tbody>
-                {props.tableData.map((item, index) => (
-                  <tr key={index}>
-                    <th>{Object.keys(item)}</th>
-                    <td>{Object.values(item)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
+            <h1 className="text-right">Case Data</h1>
+            <CaseTable
+              headerImage={props.images[0]}
+              tableData={props.tableData}
+            />
           </Col>
         </Row>
       </Container>

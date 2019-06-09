@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import CaseTemplateComp from "../components/caseTemplateComp";
+import CaseTemplateComp from "../components/singleCase/caseTemplateComp";
 
 const CaseTemplate = ({ data }) => {
   const {
@@ -19,6 +19,7 @@ const CaseTemplate = ({ data }) => {
   return (
     <CaseTemplateComp
       title={name}
+      images={images}
       tableData={[
         { leadAttorney },
         { assistantAttorney },
@@ -48,7 +49,7 @@ export const query = graphql`
       verdict
       images {
         fluid {
-          src
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
     }
