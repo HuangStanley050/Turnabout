@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import NewHero from "../components/newHero";
 import { graphql } from "gatsby";
+import BlogList from "../components/blog/blogCard";
 
 const Blog = props => {
   return (
