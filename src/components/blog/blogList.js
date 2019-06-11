@@ -27,9 +27,14 @@ const BlogList = props => {
   return (
     <section style={{ marginTop: "2rem" }}>
       <Container>
-        <Row>
+        <Row className="row-eq-height">
           {posts.edges.map(({ node }) => (
-            <Col key={node.id} xs="12" md="4">
+            <Col
+              style={{ marginBottom: "1.5rem" }}
+              key={node.id}
+              xs="12"
+              md="4"
+            >
               <BlogCard blog={node} />
             </Col>
           ))}
