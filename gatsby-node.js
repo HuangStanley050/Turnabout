@@ -18,6 +18,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      posts: allContentfulPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `);
   data.allContentfulCase.edges.forEach(({ node }) => {
@@ -25,6 +32,17 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `${node.slug}`,
       component: path.resolve(`src/templates/case-template.js`),
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
+  data.posts.edges.forEach(({ node }) => {
+    //console.log(node.slug);
+    createPage({
+      path: `/blog/${node.slug}`,
+      component: path.resolve(`src/templates/blog-template.js`),
       context: {
         slug: node.slug,
       },
