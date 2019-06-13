@@ -34,7 +34,7 @@ const BlogTemplate = ({ data }) => {
           <article style={{ margin: "2rem 0" }}>
             {documentToReactComponents(json, options)}
           </article>
-          <AniLink fade to="/blog">
+          <AniLink fade to="/blogs">
             <Button className="btn-primary">Go back to Blogs</Button>
           </AniLink>
         </Container>
