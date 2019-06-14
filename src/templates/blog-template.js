@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import { Container, Col, Row, Button } from "reactstrap";
+import { Container, Button } from "reactstrap";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -34,7 +34,7 @@ const BlogTemplate = ({ data }) => {
           <article style={{ margin: "2rem 0" }}>
             {documentToReactComponents(json, options)}
           </article>
-          <AniLink fade to="/blog">
+          <AniLink fade to="/blogs">
             <Button className="btn-primary">Go back to Blogs</Button>
           </AniLink>
         </Container>

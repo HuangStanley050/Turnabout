@@ -23,7 +23,7 @@ const BlogList = props => {
       }
     }
   `);
-  //console.log(posts);
+
   return (
     <section style={{ marginTop: "2rem" }}>
       <Container>
