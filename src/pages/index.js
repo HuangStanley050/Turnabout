@@ -3,7 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 //import Image from "../components/image"
-import SEO from "../components/seo";
+import SEO from "../components/SEO";
 import NewHero from "../components/newHero";
 //import SimpleHero from "../components/simpleHero";
 //import Banner from "../components/banner";
@@ -14,7 +14,7 @@ import FeatureCases from "../components/homePage/featureCases";
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" description="This is home page of Ace Attorney" />
       {/*<SimpleHero />*/}
       <NewHero home="true" img={data.defaultHero.childImageSharp.fluid} />
       <About />
