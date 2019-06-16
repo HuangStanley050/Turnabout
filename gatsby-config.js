@@ -7,6 +7,11 @@ module.exports = {
     title: `Ace Attorney site`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Stanley Huang`,
+    image: "/aceAttorney-about.jpg",
+    twitterUsername: "infamousgodhand",
+    facebookUsername: "jkazama",
+    instagramUsername: "ewgodhand",
+    siteUrl: "https://ace-attorney.netlify.com/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

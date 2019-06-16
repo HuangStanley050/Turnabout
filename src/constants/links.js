@@ -8,7 +8,7 @@ export default [
     text: "Cases",
   },
   {
-    path: "/blogs",
+    path: "/blogs/1",
     text: "Blogs",
   },
   {
