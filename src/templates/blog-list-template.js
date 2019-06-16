@@ -4,9 +4,11 @@ import Layout from "../components/layout";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import BlogCard from "../components/blog/blogCard";
 import { Container, Row, Col } from "reactstrap";
+import PaginationComp from "../components/paginationComp";
 
 const BlogListTemplate = props => {
   const { data } = props;
+  const { currentPage, numberPages } = props.pageContext;
   return (
     <Layout>
       <section style={{ marginTop: "2rem" }}>
@@ -28,6 +30,7 @@ const BlogListTemplate = props => {
           </Row>
         </Container>
       </section>
+      <PaginationComp currentPage={currentPage} numberPages={numberPages} />
     </Layout>
   );
 };
