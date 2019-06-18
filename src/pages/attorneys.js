@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import attorneys from "../constants/attorneys-info";
 import { Col, Row, Container, Badge } from "reactstrap";
 import Icon from "../components/icon-image";
+import SEO from "../components/SEO";
 const athenaColor = "#eaea33";
 const apolloColor = "#bf2300";
 const phoenixColor = "#362ab2";
@@ -25,6 +26,7 @@ class Attorneys extends Component {
 
     return (
       <Layout>
+        <SEO title="Attorneys" />
         <NewHero img={this.props.data.defaultHero.childImageSharp.fluid} />
         <Container fluid style={{ backgroundColor: "#DCDCDC" }}>
           <Row>

@@ -5,12 +5,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import BlogCard from "../components/blog/blogCard";
 import { Container, Row, Col } from "reactstrap";
 import PaginationComp from "../components/paginationComp";
+import SEO from "../components/SEO";
 
 const BlogListTemplate = props => {
   const { data } = props;
   const { currentPage, numberPages } = props.pageContext;
   return (
     <Layout>
+      <SEO title="Blogs" />
       <section style={{ marginTop: "2rem" }}>
         <Container>
           <h1 className="text-center">Latest Posts</h1>

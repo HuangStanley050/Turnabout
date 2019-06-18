@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import { Container, Button } from "reactstrap";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import SEO from "../components/SEO";
 
 const BlogTemplate = ({ data }) => {
   const {
@@ -27,6 +28,7 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <section style={{ marginTop: "2rem", marginBottom: "2rem" }}>
         <Container>
           <h1 className="text-center mb-3">{title}</h1>
