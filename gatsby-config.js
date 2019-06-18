@@ -14,7 +14,23 @@ module.exports = {
     siteUrl: "https://ace-attorney.netlify.com/",
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ace-attorney.netlify.com/",
+        sitemap: "https://ace-attorney.netlify.com/sitemap.xml",
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
